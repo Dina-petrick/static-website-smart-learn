@@ -23,6 +23,7 @@ const Login = () => {
     e.preventDefault();
     // Simple validation (no backend validation as requested)
     if (formData.username && formData.password) {
+      window?.ReWebSDK?.userRegister({uniqueId : formData.username })
       // Redirect to home page
       navigate('/');
     } else {
